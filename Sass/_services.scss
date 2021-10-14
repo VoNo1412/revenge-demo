@@ -1,0 +1,25 @@
+.services {
+    display: block;
+    &-main {
+        margin: 160px 0;
+    }
+
+    &-list {
+        margin-top: 40px;
+        display: flex;
+        gap: 0 20px;
+    }    
+
+    @include maxwidth(1023px) {
+        &-main {
+            margin: 80px 0;
+        }
+    }
+
+    @include maxwidth(768px) {
+        &-list {
+            flex-direction: column;
+            gap: 20px 0;
+        }
+    }
+}

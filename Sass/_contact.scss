@@ -1,0 +1,28 @@
+.contact {
+    background: url("../images/contact-bg.png") no-repeat center/cover;
+    color: #fff;
+    display: block;
+
+    .container {
+        padding: 120px 0;
+    }
+
+    &-heading {
+        font-size: 30px;
+    }
+
+    &-info {
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    textarea {
+        padding: 10px 20px 50px;
+    }
+
+    @include maxwidth(768px) {
+        .container {
+            padding: 100px 10px;
+        }
+    }
+}

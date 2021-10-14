@@ -1,0 +1,35 @@
+.brands {
+    margin-bottom: 100px;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: opacity .3s ease-in-out;
+        
+        :hover {
+            opacity: .2;
+        }
+    }
+
+    &-image {
+        padding: 40px 60px;
+    }
+
+    @include maxwidth(1023px) {
+        &-image {
+            padding: 20px 30px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.menu {
+    &-main {
+        position: fixed;
+        background-color: #fff;
+        color: #000;
+        text-transform: capitalize;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 999;
+        width: 260px;
+        transform: translateX(100%);
+        transition: all .3s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .active {
+        transform: translateX(0%);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &-list {
+        margin: 80px 0;
+    }
+
+    &-item {
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 16px 26px;
+        margin: 0 20px;
+        border-radius: 4px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            padding: 16px 30px;
+            color: #fff;
+            background-color: $blue-color;
+            opacity: .6;
+        }
+    }
+
+    &-closeX {
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    @include maxwidth(1023px) {
+        &-main {
+            width: 300px;
+        }
+    }
+}
+

@@ -1,0 +1,78 @@
+.teams {
+    padding: 140px 0;
+    display: block;
+    background-color: $grayblur-color;
+    
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 30px;
+    }
+
+    &-content {
+        max-width: 370px;
+    }
+
+    .btn--primary {
+        left: 32%;
+    }
+
+    &-list {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, minmax(260px, auto));
+
+        :first-child {
+            grid-row: 1;
+        }
+
+        :nth-child(2) {
+            grid-row: 2;
+            justify-self: right;
+        }
+
+        :last-child {
+            grid-row: span 2;
+            align-self: center;
+        }
+    }
+
+    @include maxwidth(1023px) {
+        padding: 70px 0;
+
+        .container {
+            flex-direction: column;
+            gap: 80px 0;
+        }
+
+        &-content {
+            max-width: 76%;
+            align-self: flex-start;
+        }
+
+        .btn--primary {
+            left: 0;
+            transform: translateX(0);
+        }
+    }
+
+    @include maxwidth(768px) {
+        padding: 50px 0;
+
+        .container {
+            flex-direction: column;
+            gap: 40px 0;
+        }
+
+        &-content {
+            max-width: 100%;
+        }
+
+        &-list {
+            grid-template-columns: 52% 37.5555%;
+            gap: 20px;
+        }
+
+    }
+}

@@ -1,0 +1,43 @@
+.header {
+    display: block;
+   &-main {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 40px 0;
+   }
+
+   &-logo {
+       display: inline-block;
+   }
+
+   &-navigation {
+       display: flex;
+       align-items: center;
+       gap: 0 50px;
+   }
+
+   &-phone {
+       a {
+           margin-left: 15px;
+           font-weight: 600;
+           color: inherit;
+       }
+   }
+
+   @include maxwidth(1023px) {
+       &-main {
+           padding: 20px 0;
+       }
+
+       &-phone {
+           display: none;
+       }
+
+       &-navigation {
+           gap: 0 30px;
+       }
+   }
+}
+
+
